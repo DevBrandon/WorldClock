@@ -22,7 +22,7 @@ public class WorldClockGUI {
 	private static JLabel shanghaiLabel;
 	private static JLabel argentinaAndBuenos_AiresLabel;
 	private static JLabel parisLabel;
-	
+
 	private JPanel controlsPanel;
 	private JFrame window;
 
@@ -42,7 +42,6 @@ public class WorldClockGUI {
 			try {
 				TimeUnit.SECONDS.sleep(1);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -53,7 +52,7 @@ public class WorldClockGUI {
 		shanghaiLabel = new JLabel("Initializing");
 		argentinaAndBuenos_AiresLabel = new JLabel("Initializing");
 		parisLabel = new JLabel("Initializing");
-		
+
 		controlsPanel = new JPanel();
 		controlsPanel.add(cupertinoLabel);
 		controlsPanel.add(shanghaiLabel);
@@ -61,13 +60,12 @@ public class WorldClockGUI {
 		controlsPanel.add(parisLabel);
 
 		controlsPanel.setLayout((LayoutManager) new BoxLayout(controlsPanel, BoxLayout.PAGE_AXIS));
-		
+
 		window = new JFrame();
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		window.setContentPane(controlsPanel);
 		window.pack();
 		window.setSize(200, 100);
-		// speedSlider.requestFocusInWindow();
 		window.setVisible(true);
 	}
 
@@ -77,11 +75,11 @@ public class WorldClockGUI {
 				new WorldClockGUI();
 			}
 		});
+		
 		try {
 			TimeUnit.SECONDS.sleep(5);
 			runClocks();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
