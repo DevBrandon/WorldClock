@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 /**
- * The WorldClockGUI class acts as the model and controller
+ * The WorldClockGUI class acts as the view and controller.
  * 
  * @author Brandon Jackson
  *

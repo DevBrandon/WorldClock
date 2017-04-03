@@ -3,38 +3,46 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * The WorldClockGUI class acts as the model.
+ * 
+ * Performs the required calculations to return the times of various cites around the world
+ * 
+ * @author Brandon Jackson
+ *
+ */
 public class WorldClock {
 	
-	static //Vars
-	ZonedDateTime zdt; 
-	ZoneId zoneId; 
+	//Vars
+	private static  ZonedDateTime zdt; 
+	private static ZoneId zoneId; 
 	
-	//Empty constructor, here for style purposes
+	//Empty constructor
 	public WorldClock(){
 		super();
 	}
 
 	public static String getCupertino() {
-		ZoneId zoneId = ZoneId.of( "-07:00" );
+		zoneId = ZoneId.of( "-07:00" );
 		zdt = ZonedDateTime.now( zoneId );  // Pass desired/expected time zone.
 		
 		return DateTimeFormatter.ofPattern("hh:mm:ss").format(zdt.toLocalTime());
 	}
 
 	public static String getShanghai() {
-		ZoneId zoneId = ZoneId.of( "Asia/Shanghai" );
+		zoneId = ZoneId.of( "Asia/Shanghai" );
 		zdt = ZonedDateTime.now( zoneId );  // Pass desired/expected time zone.
 		return DateTimeFormatter.ofPattern("hh:mm:ss").format(zdt.toLocalTime());
 	}
 	
 	public static String getArgentinaAndBuenos_Aires() {
-		ZoneId zoneId = ZoneId.of( "America/Argentina/Buenos_Aires" );
+		zoneId = ZoneId.of( "America/Argentina/Buenos_Aires" );
 		zdt = ZonedDateTime.now( zoneId );  // Pass desired/expected time zone.
 		return DateTimeFormatter.ofPattern("hh:mm:ss").format(zdt.toLocalTime());
 	}
 	
 	public static String getParis() {
-		ZoneId zoneId = ZoneId.of( "Europe/Paris" );
+		zoneId = ZoneId.of( "Europe/Paris" );
 		zdt = ZonedDateTime.now( zoneId );  // Pass desired/expected time zone.
 		return DateTimeFormatter.ofPattern("hh:mm:ss").format(zdt.toLocalTime());
 	}
