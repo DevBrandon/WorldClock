@@ -58,7 +58,6 @@ public class WorldClockGUI {
 		controlsPanel.add(shanghaiLabel);
 		controlsPanel.add(argentinaAndBuenos_AiresLabel);
 		controlsPanel.add(parisLabel);
-
 		controlsPanel.setLayout((LayoutManager) new BoxLayout(controlsPanel, BoxLayout.PAGE_AXIS));
 
 		window = new JFrame();
