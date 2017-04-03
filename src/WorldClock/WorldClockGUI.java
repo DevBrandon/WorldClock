@@ -27,7 +27,7 @@ public class WorldClockGUI {
 	private JFrame window;
 
 	/**
-	 * Creates and displays the GUI; constructs a maze to start things off.
+	 * Creates and displays the GUI; constructs a clock.
 	 */
 	public WorldClockGUI() {
 		createAndDisplayGUI();
