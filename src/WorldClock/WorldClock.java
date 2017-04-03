@@ -21,11 +21,11 @@ public class WorldClock {
 	public WorldClock(){
 		super();
 	}
-
+	
+	//Returns the time at desired time zone.
 	public static String getCupertino() {
 		zoneId = ZoneId.of( "-07:00" );
 		zdt = ZonedDateTime.now( zoneId );  // Pass desired/expected time zone.
-		
 		return DateTimeFormatter.ofPattern("hh:mm:ss").format(zdt.toLocalTime());
 	}
 
